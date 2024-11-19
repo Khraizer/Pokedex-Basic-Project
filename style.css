@@ -1,0 +1,154 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gif {
+    margin-top: 40px;
+    width: 450px; /* Cambia el tamaño si es necesario */
+    height: 480px;
+    animation: playOnce 1s ease-in-out forwards; /* Animación de reproducción */
+    animation-iteration-count: 1; /* Repite solo una vez */
+}
+
+/* Contenedor de la Pokédex */
+#pokedex-wrapper {
+    position: relative; /* Esto permitirá que los elementos dentro se posicionen en relación a este contenedor */
+    width: 400px; /* Asegúrate de darle un tamaño adecuado */
+    height: 600px;
+    display: none; /* Ajusta la altura si es necesario */
+}
+
+/* La imagen de la Pokédex (fondo) */
+#pokedex {
+    width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+    height: 100%; /* Ajusta la altura según el contenedor */
+    border-radius: 30px;
+    display: none; /* Le da bordes redondeados */
+}
+
+/* La imagen del Pokémon */
+#imagen {
+    position: absolute; /* La posicionamos de forma absoluta respecto al contenedor */
+    top: 25%; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%); /* Centra la imagen horizontalmente */
+    width: 200px; /* Ajusta el tamaño */
+    z-index: 1; /* Asegura que la imagen esté encima */
+}
+
+/* El nombre del Pokémon */
+#name {
+    position: absolute; /* La posicionamos sobre la imagen de fondo */
+    top: 64%; /* Ajusta la posición desde la parte superior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el texto */
+    font-size: 24px;
+    color: rgb(0, 0, 0); /* Color blanco para que se vea bien sobre la imagen de fondo */
+    z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+}
+
+#type {
+    position: absolute; /* La posicionamos sobre la imagen de fondo */
+    top: 83%; /* Ajusta la posición desde la parte superior */
+    left: 43%;
+    transform: translateX(-50%); /* Centra el texto */
+    font-size: 24px;
+    color: rgb(0, 0, 0); /* Color blanco para que se vea bien sobre la imagen de fondo */
+    z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+}
+
+
+#info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#miElemento{
+    display: none;
+}
+
+@keyframes playOnce {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d6cccc;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    height: vh85;
+    margin: 0;
+    color: #333;
+}
+.form-container {
+    background-color: #ffcc00;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+.input-container input {
+    width: 90%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #ff9900;
+    font-size: 16px;
+    color: #444;
+    outline: none;
+    transition: border-color 0.3s ease;
+    text-align: center;
+}
+.input-container input:focus {
+    border-color: #ff6600;
+}
+button {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 70%;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #cc5200;
+}
+
+.pattern{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
